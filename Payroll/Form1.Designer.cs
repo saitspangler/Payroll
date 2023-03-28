@@ -37,17 +37,23 @@
             this.btnCalculate = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtPay = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtRegular = new System.Windows.Forms.TextBox();
+            this.txtOvertime = new System.Windows.Forms.TextBox();
+            this.pnlOvertime = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlOvertime.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(656, 31);
+            this.pictureBox1.Location = new System.Drawing.Point(383, 79);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(474, 383);
+            this.pictureBox1.Size = new System.Drawing.Size(328, 227);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -64,7 +70,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(81, 256);
+            this.label2.Location = new System.Drawing.Point(81, 179);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 19);
             this.label2.TabIndex = 2;
@@ -79,14 +85,14 @@
             // 
             // txtRate
             // 
-            this.txtRate.Location = new System.Drawing.Point(216, 254);
+            this.txtRate.Location = new System.Drawing.Point(216, 179);
             this.txtRate.Name = "txtRate";
             this.txtRate.Size = new System.Drawing.Size(100, 26);
             this.txtRate.TabIndex = 4;
             // 
             // btnCalculate
             // 
-            this.btnCalculate.Location = new System.Drawing.Point(85, 359);
+            this.btnCalculate.Location = new System.Drawing.Point(76, 235);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(113, 42);
             this.btnCalculate.TabIndex = 5;
@@ -97,7 +103,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(81, 463);
+            this.label3.Location = new System.Drawing.Point(72, 441);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(108, 19);
             this.label3.TabIndex = 6;
@@ -105,16 +111,60 @@
             // 
             // txtPay
             // 
-            this.txtPay.Location = new System.Drawing.Point(216, 456);
+            this.txtPay.Location = new System.Drawing.Point(216, 434);
             this.txtPay.Name = "txtPay";
             this.txtPay.Size = new System.Drawing.Size(100, 26);
             this.txtPay.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 22);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(117, 19);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Regular Pay:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 69);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(126, 19);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Overtime Pay:";
+            // 
+            // txtRegular
+            // 
+            this.txtRegular.Location = new System.Drawing.Point(150, 15);
+            this.txtRegular.Name = "txtRegular";
+            this.txtRegular.Size = new System.Drawing.Size(100, 26);
+            this.txtRegular.TabIndex = 10;
+            // 
+            // txtOvertime
+            // 
+            this.txtOvertime.Location = new System.Drawing.Point(150, 66);
+            this.txtOvertime.Name = "txtOvertime";
+            this.txtOvertime.Size = new System.Drawing.Size(100, 26);
+            this.txtOvertime.TabIndex = 11;
+            // 
+            // pnlOvertime
+            // 
+            this.pnlOvertime.Controls.Add(this.label4);
+            this.pnlOvertime.Controls.Add(this.label5);
+            this.pnlOvertime.Controls.Add(this.txtOvertime);
+            this.pnlOvertime.Controls.Add(this.txtRegular);
+            this.pnlOvertime.Location = new System.Drawing.Point(66, 315);
+            this.pnlOvertime.Name = "pnlOvertime";
+            this.pnlOvertime.Size = new System.Drawing.Size(297, 113);
+            this.pnlOvertime.TabIndex = 12;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 658);
+            this.ClientSize = new System.Drawing.Size(757, 589);
+            this.Controls.Add(this.pnlOvertime);
             this.Controls.Add(this.txtPay);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnCalculate);
@@ -127,7 +177,10 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Payroll Calculation";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlOvertime.ResumeLayout(false);
+            this.pnlOvertime.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,6 +196,11 @@
         private System.Windows.Forms.Button btnCalculate;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtPay;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtRegular;
+        private System.Windows.Forms.TextBox txtOvertime;
+        private System.Windows.Forms.Panel pnlOvertime;
     }
 }
 
