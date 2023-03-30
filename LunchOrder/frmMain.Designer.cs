@@ -125,7 +125,7 @@
             this.boxHamburger.Controls.Add(this.cbFF);
             this.boxHamburger.Controls.Add(this.cbKMM);
             this.boxHamburger.Controls.Add(this.cbLTO);
-            this.boxHamburger.Location = new System.Drawing.Point(4, 4);
+            this.boxHamburger.Location = new System.Drawing.Point(8, 4);
             this.boxHamburger.Margin = new System.Windows.Forms.Padding(4);
             this.boxHamburger.Name = "boxHamburger";
             this.boxHamburger.Padding = new System.Windows.Forms.Padding(4);
@@ -283,7 +283,7 @@
             // hamburgerPanel
             // 
             this.hamburgerPanel.Controls.Add(this.boxHamburger);
-            this.hamburgerPanel.Location = new System.Drawing.Point(418, 58);
+            this.hamburgerPanel.Location = new System.Drawing.Point(398, 58);
             this.hamburgerPanel.Name = "hamburgerPanel";
             this.hamburgerPanel.Size = new System.Drawing.Size(312, 158);
             this.hamburgerPanel.TabIndex = 6;
@@ -292,7 +292,7 @@
             // pizzaPanel
             // 
             this.pizzaPanel.Controls.Add(this.boxPizza);
-            this.pizzaPanel.Location = new System.Drawing.Point(380, 58);
+            this.pizzaPanel.Location = new System.Drawing.Point(387, 56);
             this.pizzaPanel.Name = "pizzaPanel";
             this.pizzaPanel.Size = new System.Drawing.Size(312, 158);
             this.pizzaPanel.TabIndex = 7;
@@ -303,7 +303,7 @@
             this.boxPizza.Controls.Add(this.cbOlives);
             this.boxPizza.Controls.Add(this.cbSausage);
             this.boxPizza.Controls.Add(this.cbPepperoni);
-            this.boxPizza.Location = new System.Drawing.Point(6, 4);
+            this.boxPizza.Location = new System.Drawing.Point(3, 3);
             this.boxPizza.Name = "boxPizza";
             this.boxPizza.Size = new System.Drawing.Size(283, 146);
             this.boxPizza.TabIndex = 0;
@@ -319,6 +319,7 @@
             this.cbOlives.TabIndex = 2;
             this.cbOlives.Text = "Olives";
             this.cbOlives.UseVisualStyleBackColor = true;
+            this.cbOlives.CheckedChanged += new System.EventHandler(this.cbOlives_CheckedChanged);
             // 
             // cbSausage
             // 
@@ -329,6 +330,7 @@
             this.cbSausage.TabIndex = 1;
             this.cbSausage.Text = "Sausage";
             this.cbSausage.UseVisualStyleBackColor = true;
+            this.cbSausage.CheckedChanged += new System.EventHandler(this.cbSausage_CheckedChanged);
             // 
             // cbPepperoni
             // 
@@ -339,11 +341,12 @@
             this.cbPepperoni.TabIndex = 0;
             this.cbPepperoni.Text = "Pepperoni";
             this.cbPepperoni.UseVisualStyleBackColor = true;
+            this.cbPepperoni.CheckedChanged += new System.EventHandler(this.cbPepperoni_CheckedChanged);
             // 
             // saladPanel
             // 
             this.saladPanel.Controls.Add(this.boxSalad);
-            this.saladPanel.Location = new System.Drawing.Point(380, 58);
+            this.saladPanel.Location = new System.Drawing.Point(406, 52);
             this.saladPanel.Name = "saladPanel";
             this.saladPanel.Size = new System.Drawing.Size(283, 156);
             this.saladPanel.TabIndex = 8;
@@ -354,9 +357,9 @@
             this.boxSalad.Controls.Add(this.cbBreadSticks);
             this.boxSalad.Controls.Add(this.cbBaconBits);
             this.boxSalad.Controls.Add(this.cbCroutons);
-            this.boxSalad.Location = new System.Drawing.Point(3, 3);
+            this.boxSalad.Location = new System.Drawing.Point(6, 7);
             this.boxSalad.Name = "boxSalad";
-            this.boxSalad.Size = new System.Drawing.Size(273, 153);
+            this.boxSalad.Size = new System.Drawing.Size(277, 146);
             this.boxSalad.TabIndex = 0;
             this.boxSalad.TabStop = false;
             this.boxSalad.Text = "Add-on items ($.25/each)";
@@ -370,6 +373,7 @@
             this.cbBreadSticks.TabIndex = 2;
             this.cbBreadSticks.Text = "Bread Sticks";
             this.cbBreadSticks.UseVisualStyleBackColor = true;
+            this.cbBreadSticks.CheckedChanged += new System.EventHandler(this.cbBreadSticks_CheckedChanged);
             // 
             // cbBaconBits
             // 
@@ -380,6 +384,7 @@
             this.cbBaconBits.TabIndex = 1;
             this.cbBaconBits.Text = "Bacon Bits";
             this.cbBaconBits.UseVisualStyleBackColor = true;
+            this.cbBaconBits.CheckedChanged += new System.EventHandler(this.cbBaconBits_CheckedChanged);
             // 
             // cbCroutons
             // 
@@ -397,9 +402,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 533);
+            this.Controls.Add(this.pizzaPanel);
             this.Controls.Add(this.saladPanel);
             this.Controls.Add(this.hamburgerPanel);
-            this.Controls.Add(this.pizzaPanel);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnOrder);
